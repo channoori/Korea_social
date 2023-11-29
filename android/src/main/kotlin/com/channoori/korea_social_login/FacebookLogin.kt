@@ -25,7 +25,7 @@ class FacebookLogin {
 
     private val loginManager: LoginManager = LoginManager.getInstance()
     private lateinit var activity: Activity
-    private val resultDelegate: FacebookLoginResultDelegate
+    public val resultDelegate: FacebookLoginResultDelegate
 
     constructor() {
         val callbackManager = CallbackManager.Factory.create()

@@ -2,10 +2,17 @@ import 'package:flutter/material.dart';
 import 'dart:async';
 
 import 'package:flutter/services.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:korea_social_login/korea_social_login.dart';
 
+import 'facebook_login.dart';
+
 void main() {
-  runApp(const MyApp());
+  runApp(
+    const ProviderScope(
+      child: MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatefulWidget {
@@ -26,14 +33,9 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Plugin example app'),
+          title: const Text('Social Login Example'),
         ),
-        body: Center(
-          child: ElevatedButton(
-            onPressed: () {},
-            child: const Text("Login"),
-          ),
-        ),
+        body: const FacebookLoginPageView(),
       ),
     );
   }

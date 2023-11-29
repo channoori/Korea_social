@@ -3,7 +3,7 @@ import 'data/models/access_token.dart';
 import 'data/models/login_data.dart';
 
 class FacebookLogin {
-  Future<LoginData> facebookLogin(List<String> permissions) {
+  Future<LoginData> login(List<String> permissions) {
     return KoreaSocialLoginPlatform.instance.facebookLogin(permissions);
   }
 
